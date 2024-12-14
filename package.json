@@ -1,0 +1,44 @@
+{
+  "name": "darkmodal",
+  "version": "1.0.0",
+  "description": "accessible and simple javascript library for modal windows",
+  "main": "src/darkmodal.js",
+  "dependencies": {
+    "element-closest-polyfill": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^8.4.1",
+    "css-loader": "^7.1.2",
+    "dialog-polyfill": "^0.5.6",
+    "mini-css-extract-plugin": "^2.9.2",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KotcAnanacom/darkmodal"
+  },
+  "bugs": {
+    "url": "https://github.com/KotcAnanacom/darkmodal/issues"
+  },
+  "keywords": [
+    "modal",
+    "js",
+    "dialog",
+    "window"
+  ],
+  "browserslist": [
+    "defaults"
+  ],
+  "homepage": "https://github.com/KotcAnanacom/darkmodal/#readme",
+  "author": "kotcananacom",
+  "license": "ISC"
+}

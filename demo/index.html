@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo modal</title>
+  <link rel="stylesheet" href="../dist/darkmodal.min.css">
+</head>
+
+<body>
+
+  <button class="darkmodal-open" data-darkmodal-path="first">Открыть модальное окно 1</button>
+
+  <dialog class="darkmodal" aria-label="Модальное окно" data-darkmodal-target="first" data-darkmodal-animation="flip" data-darkmodal-speed="600">
+    <div class="darkmodal__inner">
+      <button class="darkmodal-close">Закрыть модальное окно 1</button>
+      <div class="darkmodal__content">
+        <h2>Заголовок модального окна</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <!-- Кнопка для вызова вложенного модального окна -->
+        <button class="darkmodal-open" data-darkmodal-path="second">Открыть модальное окно 2</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- custom-class — ваш класс для необходимой стилизации -->
+
+  <dialog class="darkmodal custom-class" aria-label="Модальное окно" data-darkmodal-target="second">
+    <div class="darkmodal__inner custom-class__inner">
+      <button class="darkmodal-close">Закрыть модальное окно 2</button>
+      <div class="darkmodal__content custom-class__content">
+        <h2>Заголовок модального окна</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <!-- По клику на кнопку все модальные окна будут закрываться -->
+        <button data-darkmodal-close-all>Закрыть все</button>
+      </div>
+    </div>
+  </dialog>
+
+
+  <script src="../dist/darkmodal.min.js"></script>
+  <script>
+    const darkModal = new DarkModal({
+      animation: 'slide',
+      speed: 700,
+      closeAll: false,
+      isOpen: (modal) => {
+        console.log(modal)
+      },
+      isClose: () => {
+        console.log('Закрыто')
+      }
+    })
+  </script>
+</body>
+
+</html>
